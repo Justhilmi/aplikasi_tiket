@@ -2,7 +2,7 @@ alert("Aplikasi sortir tiket")
 
 const nama          = prompt("Masukkan nama anda");
 const umur          = prompt("Masukkan umur anda");
-const umurminimal   = 12
+const umurminimal   = 13
 
 if (umur >= umurminimal){
     alert("Anda boleh memasuki studio");
@@ -15,7 +15,11 @@ if (umur >= umurminimal){
         alert(`${nama} berumur ${umur} masuk ke bioskop ${bioskop}`);
     }else{
         alert('input tidak valid')
-    }
+    }    
+}else if(umur <= umurminimal && umur >0){
+    alert(`Maaf umur anda belum cukup karena usia minimal adalah ${umurminimal} tahun`);
+}else if (umur < 0 ){
+    alert("Usia tidak valid")
 }else{
-    alert("Maaf umur anda belum cukup");
+    alert("Umur tidak valid")
 }  
